@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Mulish:wght@200;300;400;600;700;900&family=Poppins:wght@200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(0deg, rgba(148,187,233,1) 10%, rgba(238,174,202,1) 81%);
+}
+
+body::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, rgb(89, 204, 250) 10%, rgba(172, 148, 238, 0.97) 81%);
+    clip-path: circle(20% at 30% 10%) ;
+}
+
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, rgb(161, 73, 216) 10%, rgba(74, 240, 252, 0.904) 81%);
+    clip-path: circle(20% at 70% 90%) ;
+}
+.container{
+    position: relative;
+    background: rgb(255, 255, 255, 0.05);
+    border-radius: 6px;
+    overflow: hidden;
+    z-index:10;
+    backdrop-filter: blur(15px);
+    border-top: 1px solid rgb(255, 255, 255, 0.02);
+    border-left: 1px solid rgb(255, 255, 255, 0.02);
+    box-shadow: 5px 5px 30px rgba(66, 65, 65, 0.2);
+}
+
+.container .calculadora {
+    position: relative;
+    display: grid;
+}
+
+.container .calculadora .value{
+    grid-column: span 4;
+    height: 140px;
+    width: 335px;
+    text-align: right;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 30px;
+    background: transparent;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.02);
+    border-right: 1px solid rgb(255, 255, 255, 0.02);
+    
+}
+
+.container .calculadora span{
+    display: grid;
+    place-items: center;
+    width: 83px;
+    height: 75px;
+    color: white;
+    font-weight: 400;
+    cursor:pointer;
+    font-size: 20px;
+    user-select: none;
+    text-shadow: 1px 1px 1px rgb(65, 63, 63);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.09);
+    border-right: 2px solid rgba(255, 255, 255, 0.09);
+    transition: 0.5s;
+}
+
+.container .calculadora span:hover{
+    transition: 0s;
+    background: rgba(255, 255, 255, 0.09);
+}
+.container .calculadora span:active{
+    background: #7365c4;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.container .calculadora .clear{
+    grid-column: span 2;
+    width: 166px;
+    background: rgba(255, 255, 255, 0.09);
+}
+
+.container .calculadora .plus{
+    grid-row: span 2;
+    height: 150px;
+}
+
+.container .calculadora .equal{
+    background: rgba(255, 255, 255, 0.09);
+}
+
+
+
